@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <default sync-j="2"/>
+
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="openembedded"/>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="ssh://git@github.com" name="github-ssh"/>
+
+  <project remote="openembedded" revision="1f31570d0795da90083d1dbf28127c90908e30ee" upstream="kirkstone" name="meta-openembedded" path="meta-openembedded"/>
+  <project remote="yocto" revision="0118853b5bc6402cc8e43be54cd62520f6c19c62" upstream="kirkstone" name="poky" path="poky"/>
+  <project remote="yocto" revision="ce41be0a7fe7c6f5fd2155866980388d3c83389f" upstream="kirkstone" name="meta-arm" path="meta-arm"/>
+  <project remote="yocto" revision="2a5a0339d5bd28d6f6aedaf02a6aaa9b73a248e4" upstream="kirkstone" name="meta-ti" path="meta-ti"/>
+  <project remote="github" revision="06ae2c043005c9b2630b93a3233f9927dcdd0a7a" upstream="kirkstone-clang12" name="kraj/meta-clang" path="meta-clang"/>
+  <project remote="github" revision="kirkstone" name="PionixPublic/ti-am62x-evse-sdk" path="meta-ti-evse"/>
+  <project remote="github" revision="36ac52209c3ae289cd91ebb299e0703ebf73ef23" upstream="kirkstone" name="EVerest/meta-everest" path="meta-everest"/>
+</manifest>
+
