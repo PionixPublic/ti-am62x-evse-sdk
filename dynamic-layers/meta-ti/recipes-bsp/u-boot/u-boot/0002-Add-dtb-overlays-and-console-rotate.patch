@@ -1,0 +1,33 @@
+From 33f5fd19a10eb99f81e379e2439ccde6e9a96fe4 Mon Sep 17 00:00:00 2001
+From: aw50 <aw@pionix.de>
+Date: Sun, 29 Jan 2023 00:19:48 +0100
+Subject: [PATCH] Add dtb overlays and console rotate
+
+Signed-off-by: aw50 <aw@pionix.de>
+---
+ include/configs/phycore_am62x.h | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/include/configs/phycore_am62x.h b/include/configs/phycore_am62x.h
+index 958e6d1c35..1b0894136b 100644
+--- a/include/configs/phycore_am62x.h
++++ b/include/configs/phycore_am62x.h
+@@ -70,6 +70,7 @@
+ 	"finduuid=part uuid ${boot} ${mmcdev}:${bootpart} uuid\0" \
+ 	"args_mmc=run finduuid;setenv bootargs console=${console} " \
+ 		"${optargs} " \
++		"fbcon=rotate:1 " \
+ 		"root=PARTUUID=${uuid} rw " \
+ 		"rootfstype=${mmcrootfstype}\0" \
+ 	"init_mmc=run args_all args_mmc\0" \
+@@ -85,7 +86,9 @@
+ 	"get_kern_mmc=load mmc ${mmcdev}:${bootpart} ${loadaddr} " \
+ 		"${bootdir}/${name_kern}\0" \
+ 	"get_fit_mmc=load mmc ${mmcdev}:${bootpart} ${addr_fit} " \
+-		"${bootdir}/${name_fit}\0"
++		"${bootdir}/${name_fit}\0" \
++	"overlays=k3-am62-phyboard-lyra-oldi-lcd185.dtbo " \
++		"k3-am62-phyboard-lyra-m2-wifi.dtbo\0"
+ 
+ 
+ /* Incorporate settings into the U-Boot environment */

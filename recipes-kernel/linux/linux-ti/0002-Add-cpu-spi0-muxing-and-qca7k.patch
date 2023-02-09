@@ -1,0 +1,59 @@
+From ffaf2293407b615e4ed8ed053d73fd244ed0ad66 Mon Sep 17 00:00:00 2001
+From: aw50 <aw@pionix.de>
+Date: Sun, 29 Jan 2023 01:13:17 +0100
+Subject: [PATCH] Add cpu spi0 muxing and qca7k
+
+Signed-off-by: aw50 <aw@pionix.de>
+---
+ .../boot/dts/ti/k3-am62-phycore-som.dtsi      | 31 +++++++++++++++++++
+ 1 file changed, 31 insertions(+)
+
+diff --git a/arch/arm64/boot/dts/ti/k3-am62-phycore-som.dtsi b/arch/arm64/boot/dts/ti/k3-am62-phycore-som.dtsi
+index 277b2b5290e7..142e89e2597c 100644
+--- a/arch/arm64/boot/dts/ti/k3-am62-phycore-som.dtsi
++++ b/arch/arm64/boot/dts/ti/k3-am62-phycore-som.dtsi
+@@ -191,6 +191,16 @@ AM62X_IOPAD(0x008, PIN_INPUT, 0) /* (J24) OSPI0_DQS */
+ 		>;
+ 	};
+ 
++        main_spi0_pins_default: main_spi0_pins_default {
++                pinctrl-single,pins = <
++                        AM62X_IOPAD(0x1BC, PIN_INPUT, 0) /* (A14) SPI0_CLK */
++                        AM62X_IOPAD(0x1B4, PIN_OUTPUT, 0) /* (A13) SPI0_CS0 */
++                        AM62X_IOPAD(0x1C0, PIN_OUTPUT, 0) /* (B13) SPI0_D0 */
++                        AM62X_IOPAD(0x1C4, PIN_INPUT, 0)  /* (B14) SPI0_D1 */
++                        AM62X_IOPAD(0x194, PIN_INPUT, 7)  /* (B19) MCASP0_AXR3 */
++                >;
++        };
++
+ 	rtc_pins_default: rtc-pins-default {
+ 		pinctrl-single,pins = <
+ 			AM62X_IOPAD(0x1f4, PIN_INPUT, 7) /* (D16) EXTINTN.GPIO1_31 */
+@@ -229,6 +239,27 @@ &mcu_uart0 {
+ 	status = "disabled";
+ };
+ 
++&main_spi0 {
++        #address-cells = <1>;
++        #size-cells = <0>;
++        status = "okay";
++        pinctrl-names = "default";
++        pinctrl-0 = <&main_spi0_pins_default>;
++        ti,pindir-d0-out-d1-in = <1>;
++
++        qca7000: ethernet@1 {
++                compatible = "qca,qca7000";
++                reg = <0x0>; // chip select wired to CS0
++                // interrupt should be GPIO1_7 (MCASP0_AXR3)
++                interrupt-parent = <&main_gpio1>;
++                interrupts = <7 0x1>; // index 7, rising edge
++                spi-cpha;
++                spi-cpol;
++                spi-max-frequency = <8000000>;
++                local-mac-address = [ A0 B0 C0 D0 E0 F0 ];
++        };
++};
++
+ &cpsw3g {
+ 	pinctrl-names = "default";
+ 	pinctrl-0 = <&main_mdio1_pins_default

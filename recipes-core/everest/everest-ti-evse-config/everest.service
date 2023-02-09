@@ -1,0 +1,20 @@
+[Unit]
+Description=EVerest
+Requires=mosquitto.service
+Requires=network.target
+After=mosquitto.service
+After=network.target
+After=display-app.service
+
+[Service]
+Type=simple
+Restart=always
+User=root
+LimitCORE=infinity
+WorkingDirectory=/usr/bin
+ExecStartPre=sleep 5
+ExecStart=/usr/bin/manager --conf /etc/everest/config-ti.yaml
+
+[Install]
+WantedBy=multi-user.target
+

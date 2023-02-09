@@ -1,0 +1,30 @@
+From d718578c8a42a429772942a9ab191368be109a96 Mon Sep 17 00:00:00 2001
+From: aw50 <aw@pionix.de>
+Date: Sun, 29 Jan 2023 00:35:07 +0100
+Subject: [PATCH] Enable framebuffer rotation
+
+Signed-off-by: aw50 <aw@pionix.de>
+---
+ arch/arm64/configs/phytec_ti_defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm64/configs/phytec_ti_defconfig b/arch/arm64/configs/phytec_ti_defconfig
+index 1224a5deb224..de29abfc919d 100644
+--- a/arch/arm64/configs/phytec_ti_defconfig
++++ b/arch/arm64/configs/phytec_ti_defconfig
+@@ -1677,6 +1677,7 @@ CONFIG_BACKLIGHT_LED=y
+ 
+ CONFIG_FB_SSD1307=y
+ CONFIG_FRAMEBUFFER_CONSOLE=y
++CONFIG_FRAMEBUFFER_CONSOLE_ROTATION=y
+ 
+ # drm
+ 
+@@ -1741,7 +1742,6 @@ CONFIG_DRM_DUMB_VGA_DAC=n
+ CONFIG_LCD_CLASS_DEVICE=n
+ CONFIG_FB_EFI=n
+ CONFIG_FB_SIMPLE=n
+-CONFIG_FRAMEBUFFER_CONSOLE_ROTATION=n
+ CONFIG_DRM_HISI_KIRIN=n
+ CONFIG_FB_ARMCLCD=n
+ CONFIG_XEN_FBDEV_FRONTEND=n
