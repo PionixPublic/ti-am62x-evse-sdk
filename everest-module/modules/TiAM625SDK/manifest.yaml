@@ -1,0 +1,11 @@
+description: Driver module for the TI/Phytec Lyra board (am625x)
+config: {}
+provides:
+  board_support:
+    interface: board_support_AC
+    description: provides the board support Interface to low level control control pilot, relais, rcd, motor lock
+enable_external_mqtt: true
+metadata:
+  license: https://opensource.org/licenses/Apache-2.0
+  authors:
+  - "Anton Wöllert"

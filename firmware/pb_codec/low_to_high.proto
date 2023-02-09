@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+enum IEC61851Event {
+    CAR_PLUGGED_IN = 0;
+    CAR_REQUESTED_POWER = 1;
+    POWER_ON = 2;
+    POWER_OFF = 3;
+    CAR_REQUESTED_STOP_POWER = 4;
+    CAR_UNPLUGGED = 5;
+    ERROR_E = 6;
+    ERROR_DF = 7;
+    ERROR_RELAIS = 8;
+    ERROR_RCD = 9;
+    ERROR_VENTILATION_NOT_AVAILABLE = 10;
+    ERROR_OVER_CURRENT = 11;
+    EF_TO_BCD = 12;
+    BCD_TO_EF = 13;
+    PERMANENT_FAULT = 14;
+    EVSE_REPLUG_STARTED = 15;
+    EVSE_REPLUG_FINISHED = 16;
+}
+
+message McuHeartbeat {};
+
+message LowToHigh {
+    oneof message {
+        IEC61851Event event = 1;
+        McuHeartbeat heartbeat = 2;
+    }
+}
+
+
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?ccsproject version="1.0"?>
+<projectOptions>
+	<ccsVersion value="12.2.0"/>
+	<deviceVariant value="Cortex M.AM62x"/>
+	<deviceFamily value="TMS470"/>
+	<deviceEndianness value="little"/>
+	<codegenToolVersion value="TICLANG_2.1.2.LTS"/>
+	<isElfFormat value="true"/>
+	<connection value="common/targetdb/connections/TIXDS110_Connection.xml"/>
+	<rts value=""/>
+	<createSlaveProjects value=""/>
+	<ignoreDefaultDeviceSettings value="true"/>
+	<ignoreDefaultCCSSettings value="true"/>
+	<templateProperties value="id=example.projectspec.hello_world_cpp_am62x-sk_m4fss0-0_freertos_ti-arm-clang"/>
+	<origin value="/home/anton/ti/mcu_plus_sdk_am62x_08_05_00_14/examples/hello_world_cpp/am62x-sk/m4fss0-0_freertos/ti-arm-clang/example.projectspec"/>
+	<filesToOpen value=""/>
+	<isTargetManual value="false"/>
+</projectOptions>
