@@ -72,6 +72,7 @@ This section assumes, that you have minimal experience using the `OpenEmbedded
       ${BSPDIR}/meta-everest \
       ${BSPDIR}/meta-openembedded/meta-oe \
       ${BSPDIR}/meta-openembedded/meta-python \
+      ${BSPDIR}/meta-openembedded/meta-networking \
       ${BSPDIR}/meta-clang \
       "
 
