@@ -1,0 +1,18 @@
+[Unit]
+Description=PionixDisplayApp
+Requires=mosquitto.service
+Requires=network.target
+After=mosquitto.service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+User=root
+LimitCORE=infinity
+WorkingDirectory=/usr/bin
+ExecStart=flutter-pi -r 90 --release /usr/share/flutter/pionixbox/ 
+
+[Install]
+WantedBy=multi-user.target
+
