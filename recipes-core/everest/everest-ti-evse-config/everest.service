@@ -12,6 +12,7 @@ Restart=always
 User=root
 LimitCORE=infinity
 WorkingDirectory=/usr/bin
+ExecStartPre=mkdir -p /usr/share/everest/www 
 ExecStartPre=sleep 5
 ExecStart=/usr/bin/manager --conf /etc/everest/config-ti.yaml
 

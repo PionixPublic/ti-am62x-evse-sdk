@@ -30,7 +30,6 @@ active_modules:
   connector_1:
     config_module:
       ac_hlc_enabled: false
-      max_current: 16
       ac_nominal_voltage: 230
       ac_enforce_hlc: true
       ac_hlc_use_5percent: true
