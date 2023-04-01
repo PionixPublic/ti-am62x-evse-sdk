@@ -8,7 +8,7 @@ SRC_URI = "git://github.com/PionixPublic/ti-am62x-evse-sdk.git;protocol=https;br
 
 S = "${WORKDIR}/git/everest-module"
 
-SRCREV = "0f4a9116d47c8c7bfadbb01278bf3cffee5351ee"
+SRCREV = "51c0452e892f7c2306669c74da8d176b56e1f6a7"
 PV = "0.1+git${SRCPV}"
 
 DEPENDS = " \
