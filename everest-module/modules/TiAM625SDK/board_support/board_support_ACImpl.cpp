@@ -183,10 +183,14 @@ types::board_support::HardwareCapabilities board_support_ACImpl::handle_get_hw_c
     // on TIDA we cannot.
     types::board_support::HardwareCapabilities caps;
 
-    caps.max_current_A = 16;
-    caps.max_phase_count = 3;
-    caps.min_current_A = 6;
-    caps.min_phase_count = 3;
+    caps.max_current_A_import = 16;
+    caps.max_current_A_export = 0;
+    caps.max_phase_count_import = 3;
+    caps.max_phase_count_export = 3;
+    caps.min_current_A_import = 6;
+    caps.min_current_A_export = 0;
+    caps.min_phase_count_import = 3;
+    caps.min_phase_count_export = 3;
     caps.supports_changing_phases_during_charging = false;
     return caps;
 };
