@@ -11,7 +11,7 @@ Restart=always
 User=root
 LimitCORE=infinity
 WorkingDirectory=/usr/bin
-ExecStart=flutter-pi -r 90 --release /usr/share/flutter/pionixbox/ 
+ExecStart=flutter-pi -r 90 --release /usr/share/flutter/pionixbox/3.7.7/release
 
 [Install]
 WantedBy=multi-user.target
