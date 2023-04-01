@@ -7,12 +7,13 @@
   <remote fetch="https://github.com" name="github"/>
   <remote fetch="ssh://git@github.com" name="github-ssh"/>
 
-  <project remote="openembedded" revision="1f31570d0795da90083d1dbf28127c90908e30ee" upstream="kirkstone" name="meta-openembedded" path="meta-openembedded"/>
-  <project remote="yocto" revision="0118853b5bc6402cc8e43be54cd62520f6c19c62" upstream="kirkstone" name="poky" path="poky"/>
-  <project remote="yocto" revision="ce41be0a7fe7c6f5fd2155866980388d3c83389f" upstream="kirkstone" name="meta-arm" path="meta-arm"/>
-  <project remote="yocto" revision="2a5a0339d5bd28d6f6aedaf02a6aaa9b73a248e4" upstream="kirkstone" name="meta-ti" path="meta-ti"/>
-  <project remote="github" revision="06ae2c043005c9b2630b93a3233f9927dcdd0a7a" upstream="kirkstone-clang12" name="kraj/meta-clang" path="meta-clang"/>
+  <project remote="openembedded" revision="9cf4ebeb3de524009a73f49722489dc4aa183adb" upstream="kirkstone" name="meta-openembedded" path="meta-openembedded"/>
+  <project remote="yocto" revision="407c3e0237d947ec003bdd1af89a226121c7939c" upstream="kirkstone" name="poky" path="poky"/>
+  <project remote="yocto" revision="a0216a41bde3f191037332a9238648bedfbc61bd" upstream="kirkstone" name="meta-arm" path="meta-arm"/>
+  <project remote="yocto" revision="7e855982bbe79316bc517540e02bcd4414d67a62" upstream="kirkstone" name="meta-ti" path="meta-ti"/>
+  <project remote="github" revision="c2e89dc7e1dfcc1bbe432afca2dc43d6560cb007" upstream="kirkstone-clang12" name="kraj/meta-clang" path="meta-clang"/>
   <project remote="github" revision="kirkstone" name="PionixPublic/ti-am62x-evse-sdk" path="meta-ti-evse"/>
-  <project remote="github" revision="36ac52209c3ae289cd91ebb299e0703ebf73ef23" upstream="kirkstone" name="EVerest/meta-everest" path="meta-everest"/>
+  <project remote="github" revision="8b03172f31dd48bbca6273e2ebf3f424b804ccc5" upstream="kirkstone" name="EVerest/meta-everest" path="meta-everest"/>
+  <project remote="github" revision="4a9f44e671b04c8197e37dcc35d1c6157c0764f8" upstream="kirkstone" name="meta-flutter/meta-flutter" path="meta-flutter"/>
 </manifest>
 
