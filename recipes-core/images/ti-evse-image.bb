@@ -18,6 +18,10 @@ CORE_IMAGE_EXTRA_INSTALL += "\
         python3-netifaces \
         python3-dateutil \
         python3-iso15118 \
+        flutter-drm-gbm-backend \
+        flutter-pi \
+        flutter-engine \
+        pionixbox \
 	"
 # missing python3 packages:
 # pip3 install environs pydantic aiofile py4j
