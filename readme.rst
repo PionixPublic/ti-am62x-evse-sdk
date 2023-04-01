@@ -70,6 +70,7 @@ This section assumes, that you have minimal experience using the `OpenEmbedded
       ${BSPDIR}/meta-ti/meta-ti-extras \
       ${BSPDIR}/meta-ti-evse \
       ${BSPDIR}/meta-everest \
+      ${BSPDIR}/meta-flutter \
       ${BSPDIR}/meta-openembedded/meta-oe \
       ${BSPDIR}/meta-openembedded/meta-python \
       ${BSPDIR}/meta-openembedded/meta-networking \
