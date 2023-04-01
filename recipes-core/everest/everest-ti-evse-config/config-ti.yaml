@@ -68,10 +68,9 @@ active_modules:
           module_id: connector_1
     module: EnergyNode
   iso15118_charger:
-    config_implementation:
-      main:
-        device: eth2
-    module: JsRiseV2G
+    config_module:
+      device: eth2
+    module: EvseV2G
 #  iso15118_charger:
 #    config_module:
 #      device: eth2
