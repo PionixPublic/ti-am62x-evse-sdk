@@ -18,14 +18,11 @@ CORE_IMAGE_EXTRA_INSTALL += "\
         python3-netifaces \
         python3-dateutil \
         python3-iso15118 \
-        flutter-drm-gbm-backend \
-        flutter-pi \
-        flutter-engine \
-        pionixbox \
 	"
+
 # missing python3 packages:
 # pip3 install environs pydantic aiofile py4j
 
 #IMAGE_ROOTFS_SIZE ?= "8192"
 #IMAGE_ROOTFS_EXTRA_SPACE_append = "${@bb.utils.contains("DISTRO_FEATURES", "systemd", " + 4096", "" ,d)}"
-#IMAGE_ROOTFS_EXTRA_SPACE= "5000000"
+IMAGE_ROOTFS_EXTRA_SPACE= "1000000"
