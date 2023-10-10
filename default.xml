@@ -13,7 +13,7 @@
   <project remote="yocto" revision="4338e7204c9f02430f2e82555630e1abfcd34a87" upstream="kirkstone" name="meta-ti" path="meta-ti"/>
   <project remote="github" revision="c2e89dc7e1dfcc1bbe432afca2dc43d6560cb007" upstream="kirkstone-clang12" name="kraj/meta-clang" path="meta-clang"/>
   <project remote="github" revision="kirkstone" name="PionixPublic/ti-am62x-evse-sdk" path="meta-ti-evse"/>
-  <project remote="github" revision="8b03172f31dd48bbca6273e2ebf3f424b804ccc5" upstream="kirkstone" name="EVerest/meta-everest" path="meta-everest"/>
+  <project remote="github" revision="56dca1a98c5110a31344c06509c430eaa468adce" upstream="kirkstone" name="EVerest/meta-everest" path="meta-everest"/>
   <project remote="github" revision="4a9f44e671b04c8197e37dcc35d1c6157c0764f8" upstream="kirkstone" name="meta-flutter/meta-flutter" path="meta-flutter"/>
 </manifest>
 
