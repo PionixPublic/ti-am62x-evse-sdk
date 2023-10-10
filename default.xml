@@ -1,19 +1,73 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version='1.0' encoding='UTF-8'?>
 <manifest>
-  <default sync-j="2"/>
+	<phytec pdn="PD23.2.0" release_uid="BSP-Yocto-Ampliphy-AM62x-PD23.2.0" soc="AM62x" supported_builds="
+    phyboard-lyra-am62xx-1/phytec-headless-image/ampliphy,
+    phyboard-lyra-am62xx-1/phytec-qt5demo-image/ampliphy-xwayland,
+    phyboard-lyra-am62xx-2/phytec-headless-image/ampliphy,
+    phyboard-lyra-am62xx-2/phytec-qt5demo-image/ampliphy-xwayland,
+    phyboard-lyra-am62xx-3/-c populate_sdk phytec-qt5demo-image/ampliphy-xwayland,
+    phyboard-lyra-am62xx-3/phytec-headless-image/ampliphy,
+    phyboard-lyra-am62xx-3/phytec-qt5demo-image/ampliphy-xwayland
+  " bspextension="Ampliphy" build_container="phybuilder/yocto-ubuntu-20.04:phy2" />
 
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git://git.openembedded.org" name="openembedded"/>
-  <remote fetch="https://github.com" name="github"/>
-  <remote fetch="ssh://git@github.com" name="github-ssh"/>
+  <remote name="yocto" fetch="git://git.yoctoproject.org" />
+	<remote name="oe" fetch="git://git.openembedded.org" />
+	<remote name="git.phytec" fetch="git://git.phytec.de" />
+	<remote name="ssh.phytec" fetch="ssh://git@git.phytec.de" />
+	<remote name="github" fetch="https://github.com" />
+	<remote name="ti" fetch="git://git.ti.com" />
+  <remote name="github-ssh" fetch="ssh://git@github.com"/>
+  <remote name="github-wip" fetch="file:///home/kai/ti-am62x-phytec" />
 
-  <project remote="openembedded" revision="9cf4ebeb3de524009a73f49722489dc4aa183adb" upstream="kirkstone" name="meta-openembedded" path="meta-openembedded"/>
-  <project remote="yocto" revision="407c3e0237d947ec003bdd1af89a226121c7939c" upstream="kirkstone" name="poky" path="poky"/>
-  <project remote="yocto" revision="a0216a41bde3f191037332a9238648bedfbc61bd" upstream="kirkstone" name="meta-arm" path="meta-arm"/>
-  <project remote="yocto" revision="4338e7204c9f02430f2e82555630e1abfcd34a87" upstream="kirkstone" name="meta-ti" path="meta-ti"/>
-  <project remote="github" revision="c2e89dc7e1dfcc1bbe432afca2dc43d6560cb007" upstream="kirkstone-clang12" name="kraj/meta-clang" path="meta-clang"/>
-  <project remote="github" revision="kirkstone" name="PionixPublic/ti-am62x-evse-sdk" path="meta-ti-evse"/>
-  <project remote="github" revision="8b03172f31dd48bbca6273e2ebf3f424b804ccc5" upstream="kirkstone" name="EVerest/meta-everest" path="meta-everest"/>
-  <project remote="github" revision="4a9f44e671b04c8197e37dcc35d1c6157c0764f8" upstream="kirkstone" name="meta-flutter/meta-flutter" path="meta-flutter"/>
+
+	<default revision="kirkstone" remote="git.phytec" sync-j="8" />
+
+	<project name="meta-phytec" path="sources/meta-phytec" revision="refs/tags/BSP-Yocto-Ampliphy-AM62x-PD23.2.0">
+		<copyfile dest="tools/init" src="scripts/init" />
+	</project>
+	<project name="meta-qt5-phytec" path="sources/meta-qt5-phytec" revision="7ddbf460c22d2994698776c1f262e570c71559c9" />
+	<project name="meta-ampliphy" path="sources/meta-ampliphy" revision="refs/tags/BSP-Yocto-Ampliphy-AM62x-PD23.2.0" />
+	<project name="phytec/meta-summit-radio" path="sources/meta-summit-radio" remote="github" revision="ed3b8e3559b83ee5071f4bc11f00361b3c279117">
+		<ignorebaselayer />
+		<sublayer path="meta-summit-radio" />
+	</project>
+	<project name="poky" remote="yocto" path="sources/poky" revision="5d822b31316663c838c5864ab68b28fb3ca41351">
+		<ignorebaselayer />
+		<sublayer path="meta" />
+		<sublayer path="meta-poky" />
+	</project>
+	<project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="a88cb922f91fda95e8a584cee3092083d5ad3e98">
+		<ignorebaselayer />
+		<sublayer path="meta-oe" />
+		<sublayer path="meta-networking" />
+		<sublayer path="meta-python" />
+		<sublayer path="meta-gnome" />
+		<sublayer path="meta-multimedia" />
+		<sublayer path="meta-filesystems" />
+		<sublayer path="meta-perl" />
+	</project>
+	<project name="rauc/meta-rauc" path="sources/meta-rauc" remote="github" revision="804386f04826ea7fe74a1b4e0a20991425c06d9c" />
+	<project name="meta-arm" path="sources/meta-arm" remote="yocto" revision="b187fb9232ca0a6b5f8f90b4715958546fc41d73">
+		<ignorebaselayer />
+		<sublayer path="meta-arm" />
+		<sublayer path="meta-arm-toolchain" />
+	</project>
+	<project name="meta-qt5/meta-qt5" path="sources/meta-qt5" remote="github" revision="31930afca79b74e0c788452d71356c1f045e7979" />
+	<project name="meta-ti" path="sources/meta-ti" remote="yocto" revision="refs/tags/09.00.00.009">
+		<ignorebaselayer />
+		<sublayer path="meta-ti-bsp" />
+		<sublayer path="meta-ti-extras" />
+	</project>
+	<project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="2d8b3cba8ff27c9ec2187a52b6a551fe1dcfaa07" />
+	<project name="meta-security" path="sources/meta-security" remote="yocto" revision="06c240c3c235fa06fe724e278d53463ac67cc26b">
+		<ignorebaselayer />
+		<sublayer path="meta-tpm" />
+	</project>
+
+  <project name="PionixPublic/ti-am62x-evse-sdk" path="sources/meta-ti-evse" remote="github-wip" revision="kh-phytec-kirkstone" />
+  <project name="PionixPublic/ti-am62x-evse-sdk" path="sources/meta-ti-evse-conf" remote="github-wip" revision="kh-phytec-main">
+        <linkfile dest="build/conf" src="conf"/>
+    </project>
+  <project remote="github" revision="8b03172f31dd48bbca6273e2ebf3f424b804ccc5" upstream="kirkstone" name="EVerest/meta-everest" path="sources/meta-everest"/>
+  <project remote="github" revision="4a9f44e671b04c8197e37dcc35d1c6157c0764f8" upstream="kirkstone" name="meta-flutter/meta-flutter" path="sources/meta-flutter"/>
 </manifest>
-
