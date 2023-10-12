@@ -69,5 +69,6 @@
         <linkfile dest="build/conf" src="conf"/>
     </project>
   <project remote="github" revision="56dca1a98c5110a31344c06509c430eaa468adce" upstream="kirkstone" name="EVerest/meta-everest" path="sources/meta-everest"/>
-  <project remote="github" revision="4a9f44e671b04c8197e37dcc35d1c6157c0764f8" upstream="kirkstone" name="meta-flutter/meta-flutter" path="sources/meta-flutter"/>
+  <project remote="github" revision="10bf8e09358981bb4c34ce6cd03694c9a7d91697" upstream="kirkstone" name="meta-flutter/meta-flutter" path="sources/meta-flutter"/>
+  <project remote="github" revision="c2e89dc7e1dfcc1bbe432afca2dc43d6560cb007" upstream="kirkstone-clang12" name="kraj/meta-clang" path="meta-clang"/>
 </manifest>
