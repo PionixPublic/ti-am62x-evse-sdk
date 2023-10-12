@@ -68,6 +68,6 @@
   <project name="PionixPublic/ti-am62x-evse-sdk" path="sources/meta-ti-evse-conf" remote="github-wip" revision="kh-phytec-main">
         <linkfile dest="build/conf" src="conf"/>
     </project>
-  <project remote="github" revision="8b03172f31dd48bbca6273e2ebf3f424b804ccc5" upstream="kirkstone" name="EVerest/meta-everest" path="sources/meta-everest"/>
+  <project remote="github" revision="56dca1a98c5110a31344c06509c430eaa468adce" upstream="kirkstone" name="EVerest/meta-everest" path="sources/meta-everest"/>
   <project remote="github" revision="4a9f44e671b04c8197e37dcc35d1c6157c0764f8" upstream="kirkstone" name="meta-flutter/meta-flutter" path="sources/meta-flutter"/>
 </manifest>
