@@ -71,7 +71,7 @@ bool RPMsgLink::setup_connection() {
     }
 
     // using the standard rpmsg_chrdev
-    rpmsg_ep = rpmsg_char_open(M4F_MCU0_0, nullptr, MCU_ENDPOINT_NUMBER, ENDPOINT_NAME, 0);
+    rpmsg_ep = rpmsg_char_open(M4F_MCU0_0, nullptr, RPMSG_ADDR_ANY, MCU_ENDPOINT_NUMBER, ENDPOINT_NAME, 0);
 
     if (!rpmsg_ep) {
         EVLOG_critical << "rpmsg_char_open failed";

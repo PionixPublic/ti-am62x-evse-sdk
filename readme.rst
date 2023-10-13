@@ -45,50 +45,10 @@ This section assumes, that you have minimal experience using the `OpenEmbedded
 * source the open-embedded environment script::
 
     # do this in the folder, where you ran repo init
-    . poky/oe-init-build-env
+    source sources/poky/oe-init-build-env
     #^- note the space
 
-* to setup the neccessary bitbake layers, replace the file
-  ``build/conf/bblayers.conf`` with the following content::
-
-    # POKY_BBLAYERS_CONF_VERSION is increased each time build/conf/bblayers.conf
-    # changes incompatibly
-    POKY_BBLAYERS_CONF_VERSION = "2"
-
-    BBPATH = "${TOPDIR}"
-    BBFILES ?= ""
-
-    BSPDIR := "${@os.path.abspath(os.path.dirname(d.getVar('FILE', True)) + '/../..')}"
-
-    BBLAYERS ?= " \
-      ${BSPDIR}/poky/meta \
-      ${BSPDIR}/poky/meta-poky \
-      ${BSPDIR}/poky/meta-yocto-bsp \
-      ${BSPDIR}/meta-arm/meta-arm \
-      ${BSPDIR}/meta-arm/meta-arm-toolchain \
-      ${BSPDIR}/meta-ti/meta-ti-bsp \
-      ${BSPDIR}/meta-ti/meta-ti-extras \
-      ${BSPDIR}/meta-ti-evse \
-      ${BSPDIR}/meta-everest \
-      ${BSPDIR}/meta-flutter \
-      ${BSPDIR}/meta-openembedded/meta-oe \
-      ${BSPDIR}/meta-openembedded/meta-python \
-      ${BSPDIR}/meta-openembedded/meta-networking \
-      ${BSPDIR}/meta-clang \
-      "
-
-* edit the file ``build/conf/local.conf`` and replace *MACHINE* setting with::
-
-    MACHINE ??= "phyboard-lyra-am62xx"
-
-  and append the following lines at the end::
-
-    DISTRO_FEATURES:append = " systemd"
-    DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
-    VIRTUAL-RUNTIME_init_manager = "systemd"
-    VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
-
-* finally build the *ti-evse-image*::
+* build the *ti-evse-image*::
 
     bitbake ti-evse-image
 
