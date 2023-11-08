@@ -36,7 +36,7 @@ private:
 
     bool remote_peer_detected{false};
     uint16_t remote_core_id;
-    uint16_t remote_end_point;
+    uint32_t remote_end_point;
 
     SemaphoreHandle_t pending_msgs_semaphore;
     StaticSemaphore_t pending_msgs_semaphore_buffer;
