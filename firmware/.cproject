@@ -25,12 +25,12 @@
 								<listOptionValue builtIn="false" value="CCS_MBS_VERSION=6.1.3"/>
 								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY="/>
 								<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
-								<listOptionValue builtIn="false" value="PRODUCTS=sysconfig:1.13.0;com.ti.MCU_PLUS_SDK_AM62X:8.5.0.14;"/>
+								<listOptionValue builtIn="false" value="PRODUCTS=sysconfig:1.13.0;com.ti.MCU_PLUS_SDK_AM62X:9.0.0.19;"/>
 								<listOptionValue builtIn="false" value="PRODUCT_MACRO_IMPORTS={&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;],&quot;com.ti.MCU_PLUS_SDK_AM62X&quot;:[&quot;${COM_TI_MCU_PLUS_SDK_AM62X_INCLUDE_PATH}&quot;,&quot;${COM_TI_MCU_PLUS_SDK_AM62X_LIBRARY_PATH}&quot;,&quot;${COM_TI_MCU_PLUS_SDK_AM62X_LIBRARIES}&quot;,&quot;${COM_TI_MCU_PLUS_SDK_AM62X_SYMBOLS}&quot;,&quot;${COM_TI_MCU_PLUS_SDK_AM62X_SYSCONFIG_MANIFEST}&quot;]}"/>
 							</option>
 							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1729554114" name="Compiler version" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" useByScannerDiscovery="false" value="TICLANG_2.1.2.LTS" valueType="string"/>
 							<targetPlatform id="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.exe.targetPlatformDebug.1668079688" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.exe.targetPlatformDebug"/>
-							<builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.exe.builderDebug.255489965" keepEnvironmentInBuildfile="false" name="GNU Make" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.exe.builderDebug"/>
+							<builder autoBuildTarget="all" buildPath="${BuildDirectory}" cleanBuildTarget="clean" enableAutoBuild="true" enableCleanBuild="true" enabledIncrementalBuild="true" id="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.exe.builderDebug.255489965" incrementalBuildTarget="all" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU Make" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.exe.builderDebug"/>
 							<tool id="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.exe.compilerDebug.1377205162" name="Arm Compiler" superClass="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.exe.compilerDebug">
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.GENERATE_DWARF_DEBUG.1175213297" name="Generate DWARF debug" superClass="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.GENERATE_DWARF_DEBUG" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.GENERATE_DWARF_DEBUG.G_LOWERCASE" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.ENDIAN_NESS__BIG_LITTLE.154287412" name="Endian-ness (big/little) [See 'General' page to edit]" superClass="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.ENDIAN_NESS__BIG_LITTLE" useByScannerDiscovery="false" value="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.ENDIAN_NESS__BIG_LITTLE.MLITTLE_ENDIAN" valueType="enumerated"/>
@@ -42,8 +42,8 @@
 									<listOptionValue builtIn="false" value="${MCU_PLUS_SDK_PATH}/source/kernel/freertos/FreeRTOS-Kernel/include"/>
 									<listOptionValue builtIn="false" value="${MCU_PLUS_SDK_PATH}/source/kernel/freertos/portable/TI_ARM_CLANG/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="${MCU_PLUS_SDK_PATH}/source/kernel/freertos/config/am62x/m4f"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ti_am62x_charger/lib}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ti_am62x_charger/pb_codec}&quot;"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/ti_am62x_charger/lib}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/ti_am62x_charger/pb_codec}"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.DEFINE.2052145451" name="Pre-define NAME (-D)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.DEFINE" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_SYMBOLS}"/>
@@ -183,7 +183,7 @@
 								<listOptionValue builtIn="false" value="CCS_MBS_VERSION=6.1.3"/>
 								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY="/>
 								<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
-								<listOptionValue builtIn="false" value="PRODUCTS=sysconfig:1.13.0;com.ti.MCU_PLUS_SDK_AM62X:8.5.0.14;"/>
+								<listOptionValue builtIn="false" value="PRODUCTS=sysconfig:1.13.0;com.ti.MCU_PLUS_SDK_AM62X:9.0.0.19;"/>
 								<listOptionValue builtIn="false" value="PRODUCT_MACRO_IMPORTS={&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;],&quot;com.ti.MCU_PLUS_SDK_AM62X&quot;:[&quot;${COM_TI_MCU_PLUS_SDK_AM62X_INCLUDE_PATH}&quot;,&quot;${COM_TI_MCU_PLUS_SDK_AM62X_LIBRARY_PATH}&quot;,&quot;${COM_TI_MCU_PLUS_SDK_AM62X_LIBRARIES}&quot;,&quot;${COM_TI_MCU_PLUS_SDK_AM62X_SYMBOLS}&quot;,&quot;${COM_TI_MCU_PLUS_SDK_AM62X_SYSCONFIG_MANIFEST}&quot;]}"/>
 							</option>
 							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1453647774" name="Compiler version" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="TICLANG_2.1.2.LTS" valueType="string"/>
@@ -200,8 +200,8 @@
 									<listOptionValue builtIn="false" value="${MCU_PLUS_SDK_PATH}/source/kernel/freertos/FreeRTOS-Kernel/include"/>
 									<listOptionValue builtIn="false" value="${MCU_PLUS_SDK_PATH}/source/kernel/freertos/portable/TI_ARM_CLANG/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="${MCU_PLUS_SDK_PATH}/source/kernel/freertos/config/am62x/m4f"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ti_am62x_charger/lib}&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ti_am62x_charger/pb_codec}&quot;"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/ti_am62x_charger/lib}"/>
+									<listOptionValue builtIn="false" value="${workspace_loc:/ti_am62x_charger/pb_codec}"/>
 								</option>
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.DEFINE.1394591608" name="Pre-define NAME (-D)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_TICLANG_2.1.compilerID.DEFINE" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_SYMBOLS}"/>
