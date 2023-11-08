@@ -53,8 +53,8 @@ RPMsgRcvStatus RPMsg::get_msg(HighToLow& msg, uint32_t timeout_ms) {
     uint8_t msg_buffer[HighToLow_size];
     uint16_t msg_buffer_len = sizeof(msg_buffer);
 
-    uint16_t remote_core_id_, remote_end_point_;
-
+    uint16_t remote_core_id_;
+    uint32_t remote_end_point_;
     auto status = RPMessage_recv(&rpmsg_ep, msg_buffer, &msg_buffer_len, &remote_core_id_, &remote_end_point_, 0);
 
     // FIXME (aw): what to do here, technically this couldn't fail

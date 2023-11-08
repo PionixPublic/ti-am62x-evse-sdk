@@ -48,7 +48,7 @@ struct IControlPilot {
 
 struct IClock {
     // FIXME (aw): should be const somehow
-    uint32_t ticks_per_ms;
+    uint64_t ticks_per_ms;
     uint32_t (*get_current_ticks)();
 };
 
